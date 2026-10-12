@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#e8f3e9">
+    <title>사과 10</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="사과 10 홈">
+          <span class="brand-mark" aria-hidden="true">🍎</span>
+          <span>사과<span class="brand-number">10</span></span>
+        </a>
+        <button class="start-button" id="start-button" type="button">게임 시작</button>
+      </header>
+
+      <section class="game-layout" aria-label="사과 10 게임">
+        <div class="board-column">
+          <div class="board-heading">
+            <div>
+              <p class="eyebrow">APPLE MATCH</p>
+              <h1>오늘의 사과 수확</h1>
+            </div>
+            <p class="selection-total">합계 <strong id="selection-value">0</strong></p>
+          </div>
+          <div class="board-frame">
+            <div class="board" id="board" role="group" aria-label="숫자 사과 보드"></div>
+            <div class="game-over" id="game-over" hidden>
+              <p class="game-over-kicker">ROUND COMPLETE</p>
+              <h2>시간 종료</h2>
+              <p>이번 점수 <strong id="final-score">0</strong></p>
+            </div>
+          </div>
+          <p class="feedback" id="feedback" aria-live="polite"></p>
+        </div>
+
+        <aside class="score-column" aria-label="게임 기록">
+          <div class="timer-panel" id="timer-panel">
+            <div class="timer-heading">
+              <span>남은 시간</span>
+              <span class="timer-icon" aria-hidden="true">◷</span>
+            </div>
+            <p class="timer-value" id="timer" aria-live="off">01:00</p>
+            <div class="timer-track" aria-hidden="true">
+              <span class="timer-fill" id="timer-fill"></span>
+            </div>
+          </div>
+          <div class="score-panel">
+            <div class="score-item current-score">
+              <span class="score-label">현재 점수</span>
+              <strong class="score-value" id="score">0</strong>
+            </div>
+            <div class="score-item best-score">
+              <span class="score-label">최고 점수</span>
+              <strong class="score-value" id="best-score">0</strong>
+            </div>
+          </div>
+          <div class="score-stamp" aria-hidden="true">
+            <span>10</span>
+            <span>🍏</span>
+          </div>
+        </aside>
+      </section>
+      <footer class="page-footer"><span>ORCHARD CLUB</span><span>·</span><span>VOL. 10</span></footer>
+    </main>
+  </body>
+</html>
